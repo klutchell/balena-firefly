@@ -39,6 +39,16 @@ services:
       timeout: 30s
       retries: 3
 
+  # https://hub.docker.com/r/fireflyiii/data-importer
+  fidi:
+    image: fireflyiii/data-importer:version-0.9.10
+    environment:
+      - FIREFLY_III_URL=http://app:8080
+    ports:
+      - 8081:8080
+    depends_on:
+      - app
+
   # https://github.com/balenablocks/hostname
   hostname:
     image: balenablocks/hostname

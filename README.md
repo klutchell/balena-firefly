@@ -17,11 +17,12 @@ Alternatively, deployment can be carried out by manually creating a [balenaCloud
 
 Application environment variables apply to all services within the application, and can be applied fleet-wide to apply to multiple devices.
 
-| Name           | Description                                                                                                                                                             |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TZ`           | Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.                                                       |
-| `APP_KEY`      | The encryption key for your sessions. Keep this very secure. Change it to a string of exactly 32 chars or use something like `php artisan key:generate` to generate it. |
-| `SET_HOSTNAME` | Set a custom hostname on application start. Default is `firefly`.                                                                                                       |
+| Name                       | Description                                                                                                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TZ`                       | Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.                                                       |
+| `APP_KEY`                  | The encryption key for your sessions. Keep this very secure. Change it to a string of exactly 32 chars or use something like `php artisan key:generate` to generate it. |
+| `FIREFLY_III_ACCESS_TOKEN` | If using the Firefly III Data Importer (FIDI) you can generate an access token on your Firefly III profile page.                                                         |
+| `SET_HOSTNAME`             | Set a custom hostname on application start. Default is `firefly`.                                                                                                       |
 
 There are many environment variables that you can set in Firefly III. Just check out the [default env file](https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example) that lists them all.
 
