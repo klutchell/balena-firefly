@@ -1,0 +1,30 @@
+name: "Firefly III"
+type: "sw.application"
+version: 5.7.5
+description: "A free and open source personal finance manager"
+post-provisioning: >-
+  ## Usage instructions
+
+  Once your device joins the fleet you'll need to allow some time for it to download the various services.
+
+  When it's done you should be able to access the access the dashboard at <http://firefly.local>.
+
+  Documentation for Firefly III can be found at <https://docs.firefly-iii.org/>.
+assets:
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/klutchell/balena-firefly"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/klutchell/balena-firefly/main/logo.jpeg"
+data:
+  defaultDeviceType: "raspberrypi4-64"
+  supportedDeviceTypes:
+    - "fincm3"
+    - "raspberrypi3"
+    - "raspberrypi3-64"
+    - "raspberrypi4-64"
+    - "intel-nuc"
+    - "genericx86-64"
